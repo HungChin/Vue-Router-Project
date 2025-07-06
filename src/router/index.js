@@ -29,6 +29,26 @@ const routes = [
         path: 'profies',
         name: '帳戶個人資料',
         component: () => import('../views/AccountProfies.vue')
+      },
+      {
+        path: 'subAcc',
+        component: () => import('../views/AccountSub.vue'),
+        children: [
+          {
+            path: 'subA',
+            components: {
+              left: import('../views/AccountLeftA.vue'),
+              right: import('../views/AccountRightA.vue')
+            }
+          },
+          {
+            path: 'subB',
+            components: {
+              left: import('../views/AccountLeftB.vue'),
+              right: import('../views/AccountRightB.vue')
+            }
+          }
+        ]
       }
     ]
   }
