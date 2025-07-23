@@ -32,6 +32,7 @@ const routes = [
       },
       {
         path: 'subAcc',
+        name: '子帳號',
         component: () => import('../views/AccountSub.vue'),
         children: [
           {
@@ -43,6 +44,7 @@ const routes = [
           },
           {
             path: 'subB',
+            name: '子帳號B',
             components: {
               left: import('../views/AccountLeftB.vue'),
               right: import('../views/AccountRightB.vue')
